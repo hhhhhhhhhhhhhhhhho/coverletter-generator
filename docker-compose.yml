@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  # Backend 서비스
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: coverletter-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # 데이터 영속성을 위한 볼륨 마운트
+      - uploads_data:/app/uploads
+      - job_postings_data:/app/job_postings
+      - cover_letters_data:/app/cover_letters
+      - chroma_db_data:/app/chroma_db
+    networks:
+      - coverletter-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Frontend 서비스
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: coverletter-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - coverletter-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+# 네트워크 정의
+networks:
+  coverletter-network:
+    driver: bridge
+
+# 볼륨 정의 (데이터 영속성)
+volumes:
+  uploads_data:
+    driver: local
+  job_postings_data:
+    driver: local
+  cover_letters_data:
+    driver: local
+  chroma_db_data:
+    driver: local
