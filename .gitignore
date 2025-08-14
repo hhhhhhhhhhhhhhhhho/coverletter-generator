@@ -306,9 +306,9 @@ chroma_db/
 *.chroma
 
 # Upload and temporary files
-uploads/
-job_postings/
-cover_letters/
+#uploads/
+#job_postings/
+#cover_letters/
 *.pdf
 *.doc
 *.docx
