@@ -1,0 +1,627 @@
+/* 통합 커버레터 앱 스타일 */
+.integrated-app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 헤더 */
+.app-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.clear-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+.auto-save-indicator {
+  color: #27ae60;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* 메인 섹션 */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* 메인 콘텐츠 */
+.app-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* 입력 섹션 */
+.input-section {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.input-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.input-card:hover {
+  border-color: #3498db;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
+}
+
+.input-card h3 {
+  margin: 0 0 20px 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.input-card textarea {
+  width: 100%;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.input-card textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* 업로드 섹션 */
+.upload-section {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.upload-section h3 {
+  margin: 0 0 20px 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.upload-area {
+  position: relative;
+  text-align: center;
+  padding: 40px;
+  border: 3px dashed #dee2e6;
+  border-radius: 12px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  border-color: #3498db;
+  background: #f8f9ff;
+}
+
+.file-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.upload-label span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.upload-label small {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* 업로드된 파일 목록 */
+.uploaded-files {
+  margin-top: 20px;
+}
+
+.uploaded-files h4 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.file-name {
+  font-weight: 500;
+  color: #495057;
+}
+
+.remove-file-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.remove-file-btn:hover {
+  background: #c0392b;
+  transform: scale(1.1);
+}
+
+/* 디버그 섹션 */
+.debug-section {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.debug-btn {
+  background: #17a2b8;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.debug-btn:hover:not(:disabled) {
+  background: #138496;
+  transform: translateY(-2px);
+}
+
+.debug-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.debug-info {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #e9ecef;
+}
+
+.debug-info h4 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+}
+
+.debug-stats {
+  margin-bottom: 20px;
+}
+
+.debug-stats p {
+  margin: 5px 0;
+  color: #495057;
+}
+
+.relevant-docs h5 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+}
+
+.doc-item {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 4px solid #3498db;
+}
+
+.doc-item p {
+  margin: 5px 0;
+  color: #495057;
+}
+
+/* 생성기 카드 */
+.generator-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.generator-card:hover {
+  border-color: #3498db;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
+}
+
+.generator-card h3 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.generator-info {
+  color: #6c757d;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.generator-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.generate-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.generate-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.generate-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.view-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.view-btn:hover {
+  background: #218838;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(40, 167, 69, 0.4);
+}
+
+/* 로딩 인디케이터 */
+.loading-indicator {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-indicator p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* 편집기 섹션 */
+.editor-section {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.editor-header h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.editor-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.edit-toggle-btn, .save-btn, .cancel-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-toggle-btn {
+  background: #17a2b8;
+  color: white;
+}
+
+.edit-toggle-btn:hover {
+  background: #138496;
+  transform: translateY(-2px);
+}
+
+.save-btn {
+  background: #28a745;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+}
+
+/* 편집기 콘텐츠 */
+.editor-content {
+  margin-bottom: 30px;
+}
+
+.editor-textarea {
+  width: 100%;
+  min-height: 400px;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.editor-textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.preview-content {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  border: 2px solid #e9ecef;
+}
+
+.cover-letter-preview {
+  line-height: 1.6;
+  color: #495057;
+}
+
+.cover-letter-preview p {
+  margin: 0 0 15px 0;
+}
+
+.no-content {
+  color: #6c757d;
+  font-style: italic;
+  text-align: center;
+  padding: 40px;
+}
+
+/* 최종 커버레터 */
+.final-cover-letter {
+  background: #e8f5e8;
+  border-radius: 12px;
+  padding: 25px;
+  border: 2px solid #28a745;
+}
+
+.final-cover-letter h4 {
+  margin: 0 0 20px 0;
+  color: #155724;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.final-content {
+  line-height: 1.6;
+  color: #155724;
+}
+
+.final-content p {
+  margin: 0 0 15px 0;
+}
+
+/* 푸터 */
+.app-footer {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.app-footer p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .generator-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .generate-btn, .view-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .editor-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .editor-controls {
+    justify-content: center;
+  }
+
+  .app-content {
+    padding: 20px 15px;
+  }
+
+  .input-section, .generator-section, .editor-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .input-card, .upload-section, .debug-section {
+    padding: 20px;
+  }
+
+  .upload-area {
+    padding: 30px 20px;
+  }
+
+  .editor-textarea {
+    min-height: 300px;
+    padding: 15px;
+  }
+}

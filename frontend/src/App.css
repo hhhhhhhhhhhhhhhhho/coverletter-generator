@@ -1,0 +1,20 @@
+/* App.css - Minimal styles for Integrated Cover Letter App */
+.App {
+  min-height: 100vh;
+}
+
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Ensure the app takes full height */
+#root {
+  min-height: 100vh;
+}

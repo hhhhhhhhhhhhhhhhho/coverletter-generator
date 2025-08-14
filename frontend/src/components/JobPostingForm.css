@@ -1,0 +1,132 @@
+.job-posting-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid #61dafb;
+}
+
+.job-posting-form h2 {
+  color: #61dafb;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #61dafb;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #282c34;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #4fa8c5;
+  box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.2);
+}
+
+.form-control::placeholder {
+  color: #666;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+select.form-control {
+  cursor: pointer;
+}
+
+.form-text {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #cccccc;
+}
+
+.file-info {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: rgba(97, 218, 251, 0.1);
+  border-radius: 5px;
+  border-left: 3px solid #61dafb;
+}
+
+.file-info p {
+  margin: 5px 0;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.error-message {
+  margin: 15px 0;
+  padding: 12px;
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  color: #ffcccc;
+}
+
+.error-message p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #4fa8c5;
+}
+
+.submit-button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .job-posting-form {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .job-posting-form h2 {
+    font-size: 20px;
+  }
+  
+  .form-control {
+    padding: 10px;
+    font-size: 16px; /* 모바일에서 자동 확대 방지 */
+  }
+} 
