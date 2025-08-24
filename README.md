@@ -1,82 +1,34 @@
 # 📝 AI 커버레터 생성기
 
-채용공고와 이력서 PDF를 분석하여 맞춤형 커버레터를 생성하는 AI 웹 애플리케이션입니다.
 ![이미지](uploads/image.png)
-## 🚀 주요 기능
 
-- **📄 PDF 이력서 업로드**: 이력서 PDF 파일을 업로드하여 텍스트 추출
-- **🤖 AI 커버레터 생성**: 채용공고와 이력서를 분석하여 맞춤형 커버레터 생성
-- **✏️ 실시간 편집**: 생성된 커버레터를 실시간으로 편집 및 미리보기
-- **💾 자동 저장**: 모든 내용이 자동으로 저장되어 브라우저 새로고침 시에도 유지
-- **🔍 PDF 참조 분석**: 업로드된 PDF가 제대로 참조되는지 분석 및 확인
+## 🏷️ 기술 스택
 
-## 🛠️ 기술 스택
+### Frontend
+![React](https://img.shields.io/badge/React-19.1.1-blue?style=flat-square&logo=react)
+![CSS3](https://img.shields.io/badge/CSS3-3.0-orange?style=flat-square&logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=flat-square&logo=javascript)
 
-### Frontend 🎨
-```
-┌─────────────────────────────────────────────────────────────┐
-│                        Frontend                             │
-├─────────────────────────────────────────────────────────────┤
-│  React.js ──→ CSS3 ──→ Responsive Design                    │
-│      │                                                      │
-│      └──→ JavaScript ES6+ ──→ Fetch API                     │
-└─────────────────────────────────────────────────────────────┘
-```
+### Backend
+![FastAPI](https://img.shields.io/badge/FastAPI-0.116.1-green?style=flat-square&logo=fastapi)
+![Python](https://img.shields.io/badge/Python-3.11+-blue?style=flat-square&logo=python)
+![PyMuPDF](https://img.shields.io/badge/PyMuPDF-1.24.11-red?style=flat-square)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-0.5.23-purple?style=flat-square)
 
-### Backend ⚙️
-```
-┌─────────────────────────────────────────────────────────────┐
-│                         Backend                             │
-├─────────────────────────────────────────────────────────────┤
-│  FastAPI ──→ Python 3.11                                    │
-│      │                                                      │
-│      ├──→ PyMuPDF                                           │
-│      ├──→ pdfplumber                                        │
-│      ├──→ SentenceTransformers                              │
-│      ├──→ ChromaDB                                          │
-│      └──→ OpenAI API                                        │
-└─────────────────────────────────────────────────────────────┘
-```
+### AI & ML
+![OpenAI](https://img.shields.io/badge/OpenAI-API-orange?style=flat-square&logo=openai)
+![SentenceTransformers](https://img.shields.io/badge/SentenceTransformers-3.2.1-blue?style=flat-square)
+![RAG](https://img.shields.io/badge/RAG-Pipeline-green?style=flat-square)
 
-### AI & ML 🤖
-```
-┌─────────────────────────────────────────────────────────────┐
-│                       AI & ML                               │
-├─────────────────────────────────────────────────────────────┤
-│  LangChain ──→ RAG Pipeline                                 │
-│      │                                                      │
-│      └──→ Vector Embeddings ──→ Semantic Search             │
-│                                    │                        │
-│                                    └──→ LLM Generation      │
-└─────────────────────────────────────────────────────────────┘
-```
+### DevOps
+![Docker](https://img.shields.io/badge/Docker-20.10+-blue?style=flat-square&logo=docker)
+![Docker Compose](https://img.shields.io/badge/Docker%20Compose-2.0+-blue?style=flat-square&logo=docker)
 
-### Data Storage 💾
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     Data Storage                            │
-├─────────────────────────────────────────────────────────────┤
-│  Vector Database ──→ Document Embeddings                    │
-│                                                             │
-│  Local File Storage                                         │
-│      ├──→ PDF Files                                         │
-│      └──→ Job Postings                                      │
-└─────────────────────────────────────────────────────────────┘
-```
+## 📋 개요
 
-### Development Tools 🛠️
-```
-┌─────────────────────────────────────────────────────────────┐
-│                  Development Tools                          │
-├─────────────────────────────────────────────────────────────┤
-│  Docker ──→ Containerization                                │
-│  Git ──→ Version Control                                    │
-│  ESLint ──→ Code Quality                                    │
-└─────────────────────────────────────────────────────────────┘
-```
+AI 커버레터 생성기는 채용공고와 이력서 PDF를 분석하여 맞춤형 커버레터를 생성하는 웹 애플리케이션입니다. 
 
-## 🏗️ 아키텍처
-
+### 🏗️ 아키텍처
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                              System Architecture                            │
@@ -104,7 +56,7 @@
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 데이터 흐름 🔄
+### 🔄 데이터 흐름
 ```
 1. 사용자 입력 (채용공고 + PDF) 
    ↓
@@ -121,35 +73,22 @@
 7. 결과 반환 및 편집 가능
 ```
 
-## 📦 주요 라이브러리
+## 🎯 목적
 
-### Frontend
-| 라이브러리 | 버전 | 용도 |
-|-----------|------|------|
-| React | 18.x | UI 프레임워크 |
-| CSS3 | - | 스타일링 |
-| Fetch API | - | HTTP 통신 |
+### 주요 기능
+- **📄 PDF 이력서 업로드**: 이력서 PDF 파일을 업로드하여 텍스트 추출
+- **🤖 AI 커버레터 생성**: 채용공고와 이력서를 분석하여 맞춤형 커버레터 생성
+- **✏️ 실시간 편집**: 생성된 커버레터를 실시간으로 편집 및 미리보기
+- **💾 자동 저장**: 모든 내용이 자동으로 저장되어 브라우저 새로고침 시에도 유지
+- **🔍 PDF 참조 분석**: 업로드된 PDF가 제대로 참조되는지 분석 및 확인
 
-### Backend
-| 라이브러리 | 버전 | 용도 |
-|-----------|------|------|
-| FastAPI | 0.104.x | 웹 프레임워크 |
-| PyMuPDF | 1.23.x | PDF 파싱 |
-| pdfplumber | 0.11.x | PDF 텍스트 추출 |
-| SentenceTransformers | 3.2.x | 텍스트 임베딩 |
-| ChromaDB | 0.5.x | 벡터 데이터베이스 |
-| OpenAI | 1.57.x | LLM API |
-| NumPy | ≥1.24.x | 수치 계산 |
-| Pydantic | - | 데이터 검증 |
+### 해결하는 문제
+- 수동으로 커버레터 작성하는 시간 절약
+- 채용공고에 맞는 맞춤형 커버레터 생성
+- 이력서 내용을 효과적으로 활용한 커버레터 작성
+- 일관성 있고 전문적인 커버레터 품질 보장
 
-### AI & ML
-| 라이브러리 | 용도 |
-|-----------|------|
-| LangChain | AI 파이프라인 |
-| RAG | 검색 기반 생성 |
-| Vector Embeddings | 의미적 검색 |
-
-## 🚀 설치 및 실행
+## 🚀 사용법
 
 ### 방법 1: Docker 사용 (권장) 🐳
 
@@ -240,7 +179,7 @@ npm start
 - **프론트엔드**: http://localhost:3000
 - **백엔드 API**: http://localhost:8000
 
-## 📋 API 엔드포인트
+### 📋 API 엔드포인트
 
 | 엔드포인트 | 메서드 | 설명 |
 |-----------|--------|------|
@@ -249,7 +188,7 @@ npm start
 | `/api/debug-context` | POST | PDF 참조 상태 분석 |
 | `/health` | GET | 서버 상태 확인 |
 
-## 🎨 UI/UX 특징
+### 🎨 UI/UX 특징
 
 - **📱 반응형 디자인**: 모바일, 태블릿, 데스크톱 모든 기기 지원
 - **🎯 단일 페이지**: 모든 기능을 한 페이지에서 사용 가능
@@ -257,7 +196,7 @@ npm start
 - **🎨 직관적 인터페이스**: 사용하기 쉬운 깔끔한 UI
 - **💾 자동 저장**: 데이터 손실 방지를 위한 자동 저장 기능
 
-## 🔧 개발 환경
+### 🔧 개발 환경
 
 - **OS**: macOS, Windows, Linux
 - **Python**: 3.11+
@@ -266,9 +205,9 @@ npm start
 - **Docker**: 20.10+
 - **Docker Compose**: 2.0+
 
-## 🐳 Docker 구성
+### 🐳 Docker 구성
 
-### 서비스 구조
+#### 서비스 구조
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    Docker Architecture                      │
@@ -286,13 +225,13 @@ npm start
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### 볼륨 구성
+#### 볼륨 구성
 - **uploads_data**: 업로드된 PDF 파일들
 - **job_postings_data**: 채용공고 데이터
 - **cover_letters_data**: 생성된 커버레터 데이터
 - **chroma_db_data**: 벡터 데이터베이스
 
-### 네트워크 구성
+#### 네트워크 구성
 - **coverletter-network**: 프론트엔드와 백엔드 간 통신
 
 ## 📝 라이선스
